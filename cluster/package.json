@@ -1,0 +1,29 @@
+{
+  "name": "learn-cluster",
+  "version": "1.0.0",
+  "description": "utilize multi core system benefits",
+  "main": "index.js",
+  "engines": {
+    "node": "16"
+  },
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "NODE_ENV=production node index.js",
+    "dev": "NODE_ENV=development nodemon index.js"
+  },
+  "keywords": [
+    "cluster"
+  ],
+  "author": "InSantoshMahto",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.12.1",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "nodemon": "^2.0.9",
+    "prettier": "^2.3.2"
+  }
+}
