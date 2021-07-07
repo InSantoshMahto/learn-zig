@@ -1,0 +1,6 @@
+{
+  "cSpell.words": ["Mahto", "Parens", "Reqs", "Santosh", "nocheck", "paren"],
+  "js/ts.implicitProjectConfig.checkJs": true,
+  "editor.formatOnSave": true,
+  "files.autoSave": "onFocusChange"
+}
