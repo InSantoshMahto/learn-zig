@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 3000
 
 if (cluster.isPrimary) {
   console.log('No. of CPU Core:- ', numCPUs)
-  console.log(`Master ${process.pid} is running`)
+  console.log(`Primary ${process.pid} is running`)
 
   // Fork workers.
   for (let i = 0; i < numCPUs; i++) {
@@ -23,16 +23,11 @@ if (cluster.isPrimary) {
   // Workers can share any TCP connection
   // In this case it is an HTTP server
   http.createServer(async (req, res) => {
-    res.setHeader('Content-Type', 'application/json')
+    for (let i = 0; i < 10e6; i++) {
+      //
+    }
     res.writeHead(200)
-    res.end(JSON.stringify({
-      message: 'Hey NodeJS !\n',
-      data: {
-        pid: process.pid,
-        platform: process.platform,
-        cpuUsage: process.cpuUsage()
-      }
-    }))
+    res.end('Hey NodeJS !\n')
   }).listen(PORT)
   console.log(`Worker ${process.pid} started`)
 }
