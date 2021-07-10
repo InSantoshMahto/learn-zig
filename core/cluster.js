@@ -1,4 +1,3 @@
-// @ts-check
 'use strict'
 import cluster from 'cluster'
 import http from 'http'

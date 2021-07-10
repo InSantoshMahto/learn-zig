@@ -1,11 +1,11 @@
-const auth = require("basic-auth");
+import auth from "basic-auth"
 
 const basicAuthCredentials = {
   username: "your username",
   password: "your password",
 };
 
-module.exports = function (request, response, next) {
+export default function (request, response, next) {
   const user = auth(request);
   if (
     !user ||
