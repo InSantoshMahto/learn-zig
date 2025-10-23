@@ -1,8 +1,7 @@
-FROM alpine:3 AS builder
+FROM alpine:3.19 AS builder
 
-# Install zig
-RUN apk add --no-cache \
-    zig
+# Install build dependencies
+RUN apk add --no-cache zig
 
 # Set working directory
 WORKDIR /app
@@ -17,10 +16,10 @@ RUN zig build -Doptimize=ReleaseSafe
 FROM scratch
 
 # Copy binary from builder
-COPY --from=builder /app/zig-out/bin/api /usr/local/bin/
+COPY --from=builder /app/zig-out/bin/api /api
 
 # Expose port
 EXPOSE 8080
 
 # Run application
-CMD ["api"]
+CMD ["/api"]

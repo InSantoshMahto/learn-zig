@@ -1,0 +1,20 @@
+.{
+    .name = .learn_zig,
+    .version = "0.1.0",
+    .fingerprint = 0x249d3c1188f04151,
+    .dependencies = .{
+        .pg = .{
+            .url = "git+https://github.com/karlseguin/pg.zig?ref=master#c89b1c93307024f636b3c529ea2b10925683b8c6",
+            .hash = "pg-0.0.0-Wp_7gacuBgBnXbK4gIwtYThwSo9nnXYAYEuOspbX74HE",
+        },
+        .okredis = .{
+            .url = "git+https://github.com/kristoff-it/zig-okredis?ref=master#f53ad9f03a57d41d89b3ee779aaca608e1e4767f",
+            .hash = "okredis-0.1.0-Cg726vcEBAAjrhwgBJ2cjL4qN3ircjBsX6iTd7wEFiEC",
+        },
+    },
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "src",
+    },
+}

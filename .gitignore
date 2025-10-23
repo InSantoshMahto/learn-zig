@@ -1,3 +1,26 @@
+# Environment files
 .env*
 !.env.example
+
+# macOS
 .DS_Store
+
+# Zig build artifacts
+zig-out/
+.zig-cache/
+
+# IDE and editors
+.vscode/
+.idea/
+
+# Compiled binaries
+*.exe
+*.dll
+*.so
+*.dylib
+*.a
+*.o
+
+# Test artifacts
+/tmp/
+*.log
